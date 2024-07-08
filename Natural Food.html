@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<title>Natural Food</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  .topnav input[type='text'] {
+    width: 235px;
+    height: 38px;
+    border: 1px solid antiquewhite;
+    background: transparent;
+    margin-left: 10%;
+    float: left;
+  }
+
+  body {
+    position: relative;
+  }
+
+  .image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .image-container img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .image-container .icon {
+    position: absolute;
+    top: 3.5%; /* Adjust this value to move the icon vertically */
+    left: 88%; /* Adjust this value to move the icon horizontally */
+    font-size: 24px; /* Adjust the size of the icon */
+    color: antiquewhite; /* Change the color of the icon */
+  }
+
+  .search-box {
+    position: absolute;
+    top: 20px;
+    left: 190px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    background: antiquewhite;
+    border-radius: 5px;
+  }
+
+  .search-box input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: transparent;
+    outline: none;
+  }
+
+  .search-box button {
+    padding: 10px;
+    border: none;
+    background: transparent;
+    color: black;
+    cursor: pointer;
+  }
+
+  .banner-text1 {
+    position: absolute;
+    top: 15.5%;
+    color: whitesmoke;
+    padding: 3%;
+    margin-left: 50%;
+    font-weight: 700;
+    font-size: 120px;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  .banner-text2 {
+    position: absolute;
+    top: 25%;
+    color: whitesmoke;
+    padding: 3%;
+    margin-left: 30%;
+    font-weight: 700;
+    font-size: 120px;
+    color: lightgoldenrodyellow;
+    font-family: 'Jaro', sans-serif;
+  }
+
+  .banner-text3 {
+    position: absolute;
+    top: 43%;
+    color: whitesmoke;
+    padding: 3%;
+    margin-left: 80%;
+    font-weight: 700;
+    font-size: 120px;
+    color: lightgoldenrodyellow;
+    font-family: 'Jaro', sans-serif;
+  }
+
+  .button-container-1,
+  .button-container-2 {
+    position: absolute;
+    bottom: 10%; /* Adjust this value to move the buttons vertically */
+    left: 50%;
+    transform: translateX(-60%); /* Center horizontally */
+    display: flex;
+    gap: 30px; /* Space between buttons */
+  }
+
+  .button-container-1 button,
+  .button-container-2 button {
+    padding: 8px 18px;
+    border: none;
+    background: whitesmoke;
+    color: seagreen;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+
+  .button-container-1 button:hover,
+  .button-container-2 button:hover {
+    background-color: darkslateblue; /* Orange color */
+    color: lightyellow; /* Dark text color */
+  }
+
+  .button-container-1 {
+    transform: translateX(-85%) translateY(10%);
+  }
+
+  .button-container-2 {
+    transform: translateX(190%) translateY(10%);
+  }
+
+  .text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    width: 100%;
+  }
+
+  .text1, .text2, .text3, .text4 {
+    position: relative;
+    bottom: 280px;
+    left: 300px;
+    color: darkblue;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: justify;
+  }
+
+  .price {
+    color: darkblue;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 5px;
+  }
+
+  .sample-text {
+    color: darkslateblue;
+    font-size: 12px;
+    margin-top: 10px;
+  }
+  
+  .text5{
+   position: relative;
+   bottom: 700px;
+   left: 120px;
+   color: white;
+   font-size: 100px;
+   font-weight: bold;
+   text-align: justify; 
+  }
+
+  .sample-text1 {
+    color: antiquewhite;
+    font-size: 24px;
+    margin-top: 10px;
+    text-align: left;
+  }
+
+  .button-container-3 {
+    position: absolute;
+    margin-top: 5%; /* Adjust this value to move the buttons vertically */
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
+    display: flex;
+    gap: 30px; /* Space between buttons */
+    align-items: center;
+  }
+  
+  .button-container-3 button {
+    padding: 8px 18px;
+    border: none;
+    background: whitesmoke;
+    color: seagreen;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+
+  .button-container-3 button:hover {
+    background-color: darkslateblue; /* Orange color */
+    color: lightyellow; /* Dark text color */
+  }
+  
+  .text6{
+   position: relative;
+   bottom: 370px;
+   left: 300px;
+   color: black;
+   font-size: 80px;
+   font-weight: bold;
+   text-align: justify; 
+  }
+
+  .sample-text2 {
+    color: black;
+    font-size: 18px;
+    margin-top: 10px;
+    text-align: none;
+    margin-left: 27px;
+  }
+
+  /* New styles for the three vertically rectangular divs */
+  .vertical-rect-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: -300px;
+  }
+
+  .vertical-rect {
+    width: 200px;
+    height: 330px;
+    background-color: white;
+    text-align: center;
+    padding: 3px;
+    border-radius: 35px;
+    position: relative;
+  }
+
+  .vertical-rect img {
+    width: 100%;
+    height: 100%;
+    border-radius: 35px;
+  }
+
+  .vertical-rect .icon-left,
+  .vertical-rect .icon-right {
+    position: absolute;
+    top: 10px;
+    color: darkblue;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  .vertical-rect .icon-left {
+    left: 10px;
+  }
+
+  .vertical-rect .icon-right {
+    right: 10px;
+  }
+</style>
+</head>
+<body>
+  <div class="container-fluid" style="background: white;height: 900px;">
+    <div style="width:100vw;height:650px;background: transparent;">
+      <div class="image-container">
+        <img src="fruit1.jpg" width="100%" height="100%">
+        <i class="fas fa-bars icon"></i> <!-- Font Awesome icon -->
+        
+        <div class="search-box">
+          <input type="text" placeholder="Search here...">
+          <button><i class="fas fa-search"></i></button>
+        </div>
+        
+        <div class="button-container-1">
+          <button>READ MORE</button>
+        </div>
+        
+        <div class="button-container-2">
+          <button>VIEW ALL RECIPES</button>
+        </div>
+      </div>
+      
+      <div class="banner-text1">
+        <h1><big><big><big>Natural Food</big></big></big></h1>
+      </div>
+      
+      <div class="banner-text2">
+        <h3><center><p>"There are so many healthy food nuts out there that eat nothing but <i><big>natural foods</big></i> but they do not exercise and they look terrible and the purest natural food for human beings would be fresh, <i><big>uncooked food and nuts</big></i> A fare which consists of three-quarters of <i><big>vegetable food</big></i> and one-quarter meat would appear to be the most satisfactory"
+        </p></center></h3>
+      </div>
+      
+      <div class="banner-text3">
+        <h4>-Unknown author</h4>
+      </div> 
+    </div>
+
+    <!-- 1st div -->
+    <div class="image-container" style="width:280px;height:300px;background: orange; margin-left:260px; margin-top: 40px; float: left;">
+      <img src="bowl100.jpg" width="280px" height="300px">
+      <div class="text1">
+        Caesar Salad
+        <div class="price">$20</div>
+        <div class="sample-text">Sample text. Click to select the text box. Click again or double click to start editing the text.</div>
+      </div>
+    </div>
+    <!-- 2nd div --> 
+    <div class="image-container" style="width:280px;height:300px;background: white; margin-left: 340px; margin-top: 40px; float: left;">
+      <img src="bowl200.jpg" width="280px" height="300px">
+      <div class="text2">
+        Greek Salad
+        <div class="price">$45</div>
+        <div class="sample-text">Sample text. Click to select the text box. Click again or double click to start editing the text.</div>
+      </div>
+    </div>
+    <!-- 3rd div -->
+    <div class="image-container" style="width:280px;height:300px;background: orange; margin-left: 260px; margin-top: 70px; float: left;">
+      <img src="bowl350.jpg" width="280px" height="300px">
+      <div class="text3">
+        Mexican Salad
+        <div class="price">$13</div>
+        <div class="sample-text">Sample text. Click to select the text box. Click again or double click to start editing the text.</div>
+      </div>
+    </div>
+    <!-- 4th div -->
+    <div class="image-container" style="width:300px;height:300px;background: orange; margin-left: 340px; margin-top: 70px; float: left;">
+      <img src="bowl400.jpg" width="300px" height="300px">
+      <div class="text4">
+        Classic Ricotta
+        <div class="price">$24</div>
+        <div class="sample-text">Sample text. Click to select the text box. Click again or double click to start editing the text.</div>
+      </div>
+    </div>
+    <img src="fruit150.jpg" width="100%" height="100%">
+    <div class="text5">
+      Healthy<br>Evening
+      <div class="sample-text1">Some people are willing to pay the price and its the same with<br>staying healthy or <u>eating healthy.</u>There is some discipline involved.<br>There are some sacrifices.</br>
+    </div>
+    <div class="button-container-3">
+          <button>READ MORE</button>
+    </div>
+  </div>
+    <div class="text6">
+      Learn Cooking Online
+      <div class="sample-text2">Sample text. Click to select the text box. Click again or double click to start editing the text.</div>
+    </div>
+
+    <!-- New vertically rectangular divs -->
+    <div class="vertical-rect-container">
+      <div class="vertical-rect">
+        <i class="fas fa-chevron-left icon-left"></i>
+        <img src="food10.jpg" width="200px" height="330px">
+        <i class="fas fa-chevron-right icon-right"></i>
+      </div>
+      <div class="vertical-rect">
+        <i class="fas fa-chevron-left icon-left"></i>
+        <img src="food200.jpg" width="200px" height="330px">
+        <i class="fas fa-chevron-right icon-right"></i>
+      </div>
+      <div class="vertical-rect">
+        <i class="fas fa-chevron-left icon-left"></i>
+        <img src="food300.jpg" width="200px" height="330px">
+        <i class="fas fa-chevron-right icon-right"></i>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
